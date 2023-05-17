@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register a Complaint</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="project.css">
+
+</head>
+<body>
+    <form method="post" action="./frmComplaintNewEn.aspx" id="form1">
+        <div class="aspNetHidden">
+        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="GbLnro1Fp+UC/4CNdR/rOa5LkiqrEgfyyuohZidV9j0E0nFcK/VALuB95PrCkQmZMLcEgNBAtNGTt52W9p9qq/juKcy4zR1moGPMlufgyYDQoQVjLJcLK0hU3A6pc/l0" />
+        </div>
+        
+        <div class="aspNetHidden">
+            
+        
+        <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="285432F2" />
+        </div>
+          <div class="site_container">
+              <div id="header1" class="" style="background-color: aliceblue;">
+                <center><h1>ROAD SAFETY IMPROVEMENT PROJECT</h1>
+                <p>Public Works,Government Of Andhra Pradesh</p></center>
+              </div>
+              
+              
+              <div id="menu_bar" ">
+                  <div style="height: 2px">
+                  </div>
+                  <div class="links">
+                      <a href="http://www.kship.in/Default.aspx">Home</a> <a href="https://www.kship.in/pms/ImagesClient/process_flow.png">Process flow</a>
+                      <a href="" target="_blank">User Manual</a> <a href="CHMReports.aspx">
+                          Reports</a> <a href="frmContactUs.aspx">Contact Us</a>
+                  </div>
+                  <a href="frmComplaintNewKn.aspx" style="float: right; margin-top: -2px; margin-right: 15px;
+                      cursor: pointer" title="View in Telugu Language" alt="Telugu" /> తెలుగు</a>
+              </div>
+              
+              <div>
+                  <table id="tbl_main" border="0" cellpadding="2" cellspacing="5" style="width: 80%;">
+                      <tr>
+                          <td class="register_complaint_td">
+                              <div class="div_register_complaint" id="div_register_complaint">
+                                  <div class="info" align="center">
+                                      Register your complaint
+                                  </div>
+                                  <form action="epics.php" method="post">
+                                   <div class="item_holder" align="center">
+                                      <input type="text" name="Name" id="txt_newcomplaint_complainant_name" placeholder="YourName(Mandatory)" 
+                                      class="input_txt" />
+                                  </div>
+                                  <div class="item_holder" align="center">
+                                      <input type="text" name="Mobile_no." id="txt_newcomplaint_complainant_mobile" placeholder="Mobile No (Mandatory)"
+                                          maxlength="10" class="input_txt numericonly"  />
+                                  </div>
+                                  <div class="item_holder" align="center">
+                                      <input type="text" name="E_Mail" id="txt_newcomplaint_complainant_email" class="input_txt" placeholder="Email Id"
+                                          defaultval="Email Id" />
+                                  </div>
+                                  <div class="item_holder" align="center">
+                                      <select name="Profession" id="ddl_newcomplaint_complainant_profession" class="ddl" >
+                                          <option value="">Select Profession</option>
+                                          <option value="Accountant">Accountant</option>
+                                          <option value="Advocate">Advocate</option>
+                                          <option value="Govt. Offical">Govt. Offical</option>
+                                          <option value="Doctor">Doctor</option>
+                                          <option value="Engineer">Engineer</option>
+                                          <option value="Journalist">Journalist</option>
+                                          <option value="Scientist">Scientist</option>
+                                          <option value="Social worker">Social worker</option>
+                                          <option value="Student">Student</option>
+                                          <option value="Teacher">Teacher</option>
+                                          <option value="Other">Other</option>
+                                      </select>
+                                  </div>
+                                  <div class="item_holder" id="div_txt_newcomplaint_profession_other" align="center">
+                                      <input name="Profession" type="text" id="txt_newcomplaint_profession_other" class="input_txt" placeholder="Other Profession"
+                                          defaultval="Other Profession" />
+                                  </div>
+                                 
+                                       
+                                 
+                                  <div class="item_holder" align="center">
+                                      <textarea name="Description" id="txtar_newcomplaint_desc" rows="10" cols="0"  style="width: 270px;" class="input_txt txt_area"
+                                          placeholder="Describe your complaint (Mandatory)"></textarea>
+                                  </div>
+                                  <div class="item_holder" align="center">
+                                      <select name="District" style="width: 225px;"
+                                        id="district" class="ddl" onchange="changedistrict()">
+                                            <option value="">Select District</option>
+                                            <option value="Anantapur">Anantapur</option>
+                                            <option value="Kadapa">Kadapa</option>
+                                            <option value="Kurnool">Kurnool</option>
+                                            <option value="Chitoor">Chitoor</option>
+                                            <option value="Nellore">Nellore</option>
+                                            <option value="Prakasham">Prakasham</option>
+                                            <option value="Guntur">Guntur</option>
+                                            <option value="Krishna">Krishna</option>
+                                            <option value="West Godavari">West Godavari</option>
+                                            <option value="East Godavari">East Godavari</option>
+                                            <option value="Vishakapatnam">Vishakapatnam</option>
+                                            <option value="Vizianagaram">Vizianagaram</option>
+                                            <option value="Srikakulam">Srikakulam</option>
+                                            
+                                      </select>
+                                      <img class="imglink" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwYFoQGAo0wFKuMZptQdAF2FWHygPUX49uMqazrwpzKA&s"
+                                         alt="" id="view_state_map" style="vertical-align: middle;"  title="Click here to view AP Roads" />
+                                      
+                                  </div>
+                                  <div class="item_holder" align="center">
+                                    <select name="RoadLocation" style="width: 270px;"
+                                      id="sub-district" class="ddl">
+
+                                      <option value="none">Primarily Select District</option>
+                                     
+
+
+
+                                      
+
+
+                                      
+                                      
+                                    </select>
+                                   </div>
+                                  
+                                  <div class="item_holder" align="center">
+                                      
+                                        <select id="ddl_newcomplaint_category" name="General" class="ddl"><option value="General">General (Will be resolved in 20 days)</option><option value="Accessibility of Road Users">Accessibility of Road Users (Will be resolved in 30 days)</option><option value="Construction Quality">Construction Quality (Will be resolved in 30 days)</option><option value="Design and Layouts">Design and Layouts (Will be resolved in 30 days)</option><option value="Fraud and Corruption">Fraud and Corruption (Will be resolved in 40 days)</option><option value="Procurement">Procurement (Will be resolved in 40 days)</option><option value="Road Safety">Road Safety (Will be resolved in 30 days)</option><option value="Social Issues">Social Issues (Will be resolved in 30 days)</option><option value="Resettlement &amp; Rehabilitation">Resettlement &amp; Rehabilitation (Will be resolved in 30 days)</option><option value="Environment">Environment (Will be resolved in 30 days)</option><option value="Land Acquisition">Land Acquisition (Will be resolved in 30 days)</option><option value="Staff Misbehaviour">Staff Misbehaviour (Will be resolved in 30 days)</option><option value="Utility Shifting">Utility Shifting (Will be resolved in 30 days)</option></select>
+                                   
+                                  </div>
+                                  <div class="item_holder" align="center">
+                                      <textarea id="txtar_newcomplaint_complainant_address" name="Address" rows="0" cols="0" class="input_txt txt_area"
+                                          defaultval="Address (Mandatory)">Address (Mandatory)</textarea>
+                                  </div>
+                                 
+                                  <div align="center" id="attach_photo" class="item_holder">
+                                      <input type="file" name="Image" id="newcomplaint_attach_photo" value="Upload Photo" />
+                                      <span id="filelist" style="white-space: normal"></span>
+                                  </div>
+                                  <div class="item_holder" align="center">
+                            
+                                      <input type="button" id="btn_submit_new_complaint" class="button1" value="Submit"
+                                          title="Click to submit your complaint" />
+                                  </div>
+                                  </form>
+                              </div>
+                          </td>
+                          
+                          <td class="track_complaint_td">
+                              <div id="box_right">
+                                  <div>
+                                      <div class="box_header">
+                                          <span style="font-weight: bold">You can reach us</span>
+                                      </div>
+                                      <div class="box_content" style="height: 367px;">
+                                          <div class="contact_details">
+                                              <ol>
+                                                 <strong> <li>Through postal address:</strong>
+                                                      <ul>
+                                                          <li>STATE HIGHWAYS IMPROVEMENT PROJECT,<br />
+                                                              Vamsadhara block <br />NIT AP <br />Tadepalligudem- 560001<br />
+                                                              <!--Land Line No: 080-22126758,22126759<br />
+                                                              Fax: 080-22229666<br />-->
+                                                              Email: <a href="mailto:saivijaykiranc2003@gmail.com">piukship@gmail.com</a> <br>
+                                                                  <a href="mailto:pdkship@gmail.com">pdkship@gmail.com</a>
+                                                          </li>
+                                                      </ul>
+                                                  </li>
+                                                <strong><li>Through Public Response Center Help Line:</strong>
+                                                      <ul>
+                                                          <li class="text-danger">080-22249981</li>
+                                                          <!--<li>Land Line Number: 080-23205995</li>
+                                                          <li>Cell No: 9482079947 / 7204900000</li>
+                                                          <li>Skype ID: Kshipprc</li>
+                                                          <li>WhatsApp: 9482079947</li>
+                                                          <li>Email: <a href="mailto:kshipprc@vindhyainfo.com">kshipprc@vindhyainfo.com</a></li>-->
+                                                      </ul>
+                                                      <span class="text-warning"><small>PRC will be available from 10:30AM to 5:30PM on all Government working days</small></span>
+                                                  </li>
+                                                <strong><li>Through Facebook:</strong>
+                                                      <ul>
+                                                          <li><a href="https://www.facebook.com/pwd.KSHIP" title="Click to visit KSHIP facebook page"
+                                                              target="_blank" style="text-decoration:none;">
+                                                              <img src="../../Images/RowIcons/ico-facebook.gif" alt="" />&nbsp;<span>www.facebook.com/pwd.KSHIP</span>
+                                                          </a></li>
+                                                      </ul>
+                                                  </li> 
+        
+                                                  <li>Through Fax:
+                                                      <ul>
+                                                          <li>080-22229666</li>
+                                                      </ul>
+                                                  </li>
+                                                  <li>Through E-mail:
+                                                      <ul>
+                                                          <li>piukship@gmail.com</li>
+                                                          <li>pdkship@gmail.com</li>
+                                                      </ul>
+                                                  </li>
+                                              </ol>
+                                              <br>
+                                              <br>
+                                              
+                                            </div>
+                                            
+                                          </div>
+                                        
+                                        </div>
+                                        <div id="complaint_track">
+                                            
+                                        </div>
+                                        <div id="count_report">
+                                            <div class="box_header">
+                                                Know more (You can view real time status of complaints)
+                                            </div>
+                                            <div class="box_content">
+                                                <span style="display: block; float: left; width: 33%">Total Complaints</span> <span
+                                                    style="display: block; float: left; width: 34%">Resolved Complaints</span> <span
+                                                        style="display: block; float: left; width: 33%">Pending Complaints</span>
+                                                <span style="display: block; clear: both; float: left; width: 33%"><a class="complaint_summary link"
+                                                    id="complaint_summary_total_complaints">0</a></span> <span style="display: block;
+                                                        float: left; width: 34%"><a class="complaint_summary link" id="complaint_summary_resolved_complaints">
+                                                            0</a></span> <span style="display: block; float: left; width: 33%"><a class="complaint_summary link"
+                                                                id="complaint_summary_pending_complaints">0</a></span>
+                                                <div style="clear: both">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="box_header1">
+                                            BIS Approved HeadGears
+                                        
+                                        </div>
+                                        <div class="box_content" style="height: 181px;">
+                                            <a href="https://www.amazon.in/dp/B011GOY6HG?tag=toi_bestproducts_org_web_ls-21&linkCode=ogi&th=1&psc=1" style="width: 10px;">
+                                                <img src="https://m.media-amazon.com/images/I/51BXMsxaVoL._SX450_.jpg" alt="Helmet">
+                                            </a>
+                                            <a href="https://www.amazon.in/dp/B011GOY6HG?tag=toi_bestproducts_org_web_ls-21&linkCode=ogi&th=1&psc=1" style="width: 10px;"">
+                                                <img src="https://m.media-amazon.com/images/I/51DC1iZao8L._SX450_.jpg" alt="Helmet">
+                                            </a>
+                                            <div class="vmore">
+                                            <a href="https://www.amazon.in/dp/B011GOY6HG?tag=toi_bestproducts_org_web_ls-21&linkCode=ogi&th=1&psc=1">
+
+            
+                                                <input type="button" id="btn_submit_new_complaint" class="button1" value="View More" style="background-color: #888888;"
+                                          title="View More" />
+                                            </a>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                  </div>
+                                  
+                                  
+                                  
+                              </div>
+                          </td>
+                      </tr>
+                  </table>
+              </div>
+          </div>
+          
+                  
+         
+          
+          </form>
+    <script>
+      var districtObject={ 
+        "Anantapur" : ["Anantapur - Kalyandurg - RayadurgRoad","Kadiri - Hindupur Road","Hindupur - Madakasira - Thumku","Jammalamadugu - Kadiri road","Rajampeta - Kadiri Road","Guntakal – Uravakonda road ","Guntakal – Thungabhadra road ","Hindupur Somandepalli road.","Amarapuram-Virupasamudram road from km 0/0 to 8/424 ","Mahammadabadu - Maralapalli -Balasamudramu (CG project) road"],
+        "Kadapa":["Cuddapah-Pulivendula road ","Rajampet-Gudur-Duggirajapatnam road","Renigunta - Rayalacheruvu road.(Formerly CRA road developed with APSHP-4)","Proddatur-Chagalamarri road","Mypadu-Nellore-Ballary-Bombay road"," Jammalamadugu-Kadiri road","Nagasanipalli-Mallepalli road ","Gundlakunta - Peddamudiam - Sudda Palle - NH 18","Gandi - Batrepalli (Anantapur District) via Talupula"]
+                          
+      }
+      function changedistrict() {
+  document.getElementById("sub-district").options.length = 0;
+
+  var cityListArray = districtObject[document.getElementById("district").value];
+  console.log(document.getElementById("sub-district").options);
+
+  for (var item = 0; item < cityListArray.length; item++) {
+    document.getElementById("sub-district").options[document.getElementById("sub-district").options.length] = new Option(cityListArray[item], cityListArray[item]);
+  }
+}
+
+
+    </script>
+</body>
+</html>

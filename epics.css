@@ -1,0 +1,457 @@
+<style type="text/css">
+        .header1{
+            font-family: 'Edu NSW ACT Foundation', cursive;
+        }
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Edu NSW ACT Foundation', cursive;
+        }
+        input{
+            border-radius: 6px;
+            
+            font-size: 16px;
+            outline: none;
+            
+            
+        }
+
+        .register_complaint_td
+        {
+            background-color:#2abf90;
+            height: 780px;
+            overflow: auto;
+            margin-top: 10px;
+            border: solid 2px #2abf90;
+            border-color: #FFFFFF;
+            border-radius: 10px;
+            
+        }
+        
+        .input_txt
+        {
+            width: 270px;
+            height: 35px;
+            /*font-weight: bold;*/
+            border-radius: 7px;
+            border: solid 1px #888888;
+            font-family: Arial;
+        }
+        .tbl_main{
+            width: 50%;
+        }
+        .ddl
+        {
+            width: 270px;
+            height: 35px;
+            /*font-weight: bold;*/
+            border-radius: 5px;
+            font-size: 15px;
+        }
+        .info
+        {
+            margin-bottom: 20px;
+            color: #FFFFFF;
+            background: #2abf90;
+            font-size: 20px;
+            font-weight: normal;
+        }
+        .item_holder
+        {
+            margin-top: 5px;
+        }
+        strong{
+            font-size: 20px;
+        }
+        .txt_area
+        {
+            height: 100px;
+            width: 270px;
+            /*font-weight: bold;*/
+            border-radius: 7px;
+            font-family: Arial;
+        }
+        .button1
+        {
+            background: #FFFFFF;
+            color: #000000;
+            height: 35px;
+            width: 120px;
+            border: solid 1px;
+            margin-top: 7px;
+        }
+        .button1:hover
+        {
+            background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #E0E0E0), color-stop(1, #F0F0F0) );
+        }
+        .uploadifyQueue
+        {
+            display: none;
+        }
+        .mandatory_field, .errorlist, .err_info
+        {
+            color: #FF0000;
+            font-size: larger;
+            font-weight: bold;
+        }
+        .tbl_item
+        {
+            margin: 2px;
+            border: solid 1px;
+            border-color: #FFFFFF;
+            width: 628px;
+            border-collapse: collapse;
+        }
+        .tbl_item th
+        {
+            background: #2abf90;
+            color: #000000;
+            font-size: 17px;
+            text-align: center;
+            font-weight: normal;
+        }
+        form{
+            flex-direction: column;
+        }
+        .tbl_item td
+        {
+            color: #000000;
+            border-bottom: solid 1px;
+            border-color: #83A723;
+            border-collapse: collapse;
+            text-align: center;
+            
+        }
+        img{
+            width: 180px;
+            margin-left: 0px;
+            border: 2px solid #2abf90;
+        }
+        .imglink{
+            width:15%;
+            border-radius: 5px;
+        }
+        .imglink1{
+            
+                width:20%;
+                border-radius: 5px;
+            
+        }
+        .tbl_item thead td
+        {
+            text-align: center;
+        }
+        .register_complaint_td
+        {
+            width: 350px;
+            vertical-align: top;
+        }
+        .track_complaint_td
+        {
+            width: 650px;
+            vertical-align: top;
+        }
+        
+         
+        .link
+        {
+            color: #0000FF;
+            text-align: center;
+            text-decoration: underline;
+            cursor: pointer;
+        
+        }
+        .btn_align_right
+        {
+            width: 50px;
+            height: 30px;
+            text-align: center;
+        }
+        .ui-dialog-titlebar
+        {
+            background-color:#2abf90;
+        }
+        .ui-widget
+        {
+        	font-size:12px;
+        }
+        #recovered_details_complaint_no
+        {
+            font-weight: bolder;
+        }
+        #recovered_details_description
+        {
+            text-align: justify;
+        }
+        .complaint_summary_count
+        {
+            font-size: 15px;
+            font-weight: bold;
+            text-align: center;
+        }
+        #div_track_complaint_details table:first-child tr:first-child td:first-child
+        {
+            width: 150px;
+        }
+        .filedownload
+        {
+            color: Blue !important;
+            margin-left: 10px;
+            margin-right: 10px;
+            cursor: pointer;
+            padding: 0 5px 0 5px;
+            text-decoration: none;
+        }
+        .filedownload:hover
+        {
+            text-decoration: underline;
+        }
+        #btn_dept_login
+        {
+            width: 75px;
+            height: 20px;
+            vertical-align: top;
+            text-align: center;
+        }
+        .leftalign
+        {
+            text-align: left;
+        }
+        .rightalign
+        {
+            text-align: right;
+        }
+        .centeralign
+        {
+            text-align: center;
+        }
+        .topalign
+        {
+            text-align: left;
+            vertical-align: top;
+        }
+        .div_complaint_details
+        {
+            background-color: #EFEFEF;
+            width: 60%;
+            height: 230px;
+            overflow: auto;
+            float: left;
+            font-size: 13px;
+        }
+        .div_history
+        {
+            background-color: #FFFFFF;
+            width: 40%;
+            height: 230px;
+            overflow: auto;
+            float: right;
+        }
+        .history_entry
+        {
+            font-size: 11px;
+            padding: 5px;
+        }
+        .history_status
+        {
+            color: blue;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+        .captionlike
+        {
+            background-color: #6E9394;
+            color: #FFFFFF;
+        }
+        .captionlike1
+        {
+            background-color: #6E9394;
+            color: #FFFFFF;
+        }
+        .header
+        {
+            float: left;
+        }
+        .first
+        {
+            width: 100px;
+            border: solid 0px red;
+        }
+        .first1
+        {
+            width: 150px;
+            border: solid 0px red;
+        }
+        .data_item
+        {
+            padding-left: 2px;
+            padding-right: 5px;
+            float: left;
+        }
+        .kn_font
+        {
+            font-family: Tunga;
+        }
+        .en_font
+        {
+            font-family: Trebuchet MS;
+        }
+        .contact_details
+        {
+            margin-left: 40px;
+            font-size: 18px;
+            text-align: left;
+        }
+        .contact_details ol li
+        {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .contact_details ol li ul li
+        {
+            font-size: 14px;
+            font-weight: normal;
+        }
+        .contact_data
+        {
+            margin-left: 40px;
+        }
+    </style>
+    <style type="text/css">
+        body
+        {
+            margin: 0;
+            padding: 0;
+            top: 0px;
+            color: #000; 
+        }
+        .site_container
+        {
+            margin: 10px auto; /*overflow:hidden;*/
+            width: 950px;
+            text-align: left;
+            padding: 0;
+            border: solid 0px #888888;
+            background-color: #FFFFFF;
+            -moz-box-shadow: 3px 3px 3px 3px rgba(128,128,128,0.5);
+            -webkit-box-shadow: 3px 3px 3px 3px rgba(128,128,128,0.5);
+            box-shadow: 3px 3px 3px 3px rgba(128,128,128,0.3);
+        }
+        #header
+        {
+            background-color: #FFFFFF;
+            min-width: 950px;
+            height: 100px;
+            border: solid 0px blue;
+            position: relative;
+            margin-bottom: 5px;
+        }
+        
+        .org_name
+        {
+            position: absolute;
+            left: 130px;
+            top: 30px;
+            font-size: 26px;
+            font-family: Georgia;
+        }
+        .dept_name
+        {
+            position: absolute;
+            left: 130px;
+            top: 60px;
+            font-size: 15px;
+            font-family: Georgia;
+        }
+        #company_logo
+        {
+            position: absolute;
+            right: 0px;
+            top: 30px;
+            width: 150px;
+        }
+        #menu_bar
+        {
+            background-color: #888888;
+            color: White;
+            font-size: 14px;
+            font-weight: bold;
+            height: 30px;
+            width: 100%;
+            text-align: left;
+        }
+        .links
+        {
+            margin: 5px;
+            border: solid 0px white;
+        }
+        #menu_bar a, #menu_bar a:visited
+        {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: 15px;
+            text-decoration: none;
+            color: White;
+            float: left;
+        }
+        #menu_bar a:hover
+        {
+            background-color: #FFFFFF;
+            color: Black;
+            border-radius: 5px;
+        }
+        .rounded_corners
+        {
+            border-radius: 5px;
+        }
+        .separator
+        {
+            clear: both;
+            height: 5px;
+        }
+        #box_right
+        {
+            width: 630px;
+            border: solid 0px red;
+            height: 790px;
+            margin-top: 13px;
+            margin-right: 5px;
+        }
+        .box_header
+        {
+            width: 99%;
+            height: 30px;
+            font-size: 17px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            border: solid 2px #2abf90;
+            background-color: #2abf90;
+            text-align: center;
+        }
+        .box_header1{
+            width: 99%;
+            height: 30px;
+            font-size: 17px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            border: solid 2px #2abf90;
+            background-color: #2abf90;
+            text-align: center;
+            margin-top: 0px;
+        }
+        .box_content
+        {
+            width: 99%;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            border: solid 2px #D0D0D0;
+            border-top: solid 1px #F0F0F0;
+            background-color: #F0F0F0;
+            text-align: center;
+            vertical-align: middle;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+    </style>
